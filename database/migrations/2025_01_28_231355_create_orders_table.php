@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('template_id')->constrained();
-            $table->string('nama_customer');
-            $table->string('email_customer');
-            $table->decimal('total_harga', 10, 2);
-            $table->string('status')->default('pending');
-            $table->string('link_pembayaran')->nullable();
-            $table->timestamps();
+            Schema::create('orders', function (Blueprint $table) {
+                $table->id();
+                $table->foreignId('template_id')->constrained();
+                $table->string('nama_customer');
+                $table->string('email_customer');
+                $table->decimal('total_harga', 10, 2);
+                $table->string('status')->default('pending');
+                $table->string('link_pembayaran')->nullable();
+                $table->timestamps();
         });
     }
 
